@@ -1,8 +1,8 @@
 {
-  "title": "Test",
-  "description": "Testing kata",
+  "title": "Docker 101",
+  "description": "Intro to Docker",
   "difficulty": "Beginner",
-  "time": "30",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {
@@ -44,6 +44,46 @@
       {
         "title": "Step 10",
         "text": "step10.md"
+      },
+      {
+        "title": "Step 11",
+        "text": "step11.md"
+      },
+      {
+        "title": "Step 12",
+        "text": "step12.md"
+      },
+      {
+        "title": "Step 13",
+        "text": "step13.md"
+      },
+      {
+        "title": "Step 14",
+        "text": "step14.md"
+      },
+      {
+        "title": "Step 15",
+        "text": "step15.md"
+      },
+      {
+        "title": "Step 16",
+        "text": "step16.md"
+      },
+      {
+        "title": "Step 17",
+        "text": "step17.md"
+      },
+      {
+        "title": "Step 18",
+        "text": "step18.md"
+      },
+      {
+        "title": "Step 19",
+        "text": "step19.md"
+      },
+      {
+        "title": "Step 20",
+        "text": "step20.md"
       }
     ],
     "intro": {
@@ -57,6 +97,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "ubuntu"
   }
 }
