@@ -1,8 +1,8 @@
 {
-  "title": "Docker 101",
-  "description": "Intro to Docker (Theory)",
+  "title": "Docker Run",
+  "description": "Run Docker Containers",
   "difficulty": "Beginner",
-  "time": "10 minutes",
+  "time": "15 minutes",
   "details": {
     "steps": [
       {
@@ -44,46 +44,6 @@
       {
         "title": "Step 10",
         "text": "step10.md"
-      },
-      {
-        "title": "Step 11",
-        "text": "step11.md"
-      },
-      {
-        "title": "Step 12",
-        "text": "step12.md"
-      },
-      {
-        "title": "Step 13",
-        "text": "step13.md"
-      },
-      {
-        "title": "Step 14",
-        "text": "step14.md"
-      },
-      {
-        "title": "Step 15",
-        "text": "step15.md"
-      },
-      {
-        "title": "Step 16",
-        "text": "step16.md"
-      },
-      {
-        "title": "Step 17",
-        "text": "step17.md"
-      },
-      {
-        "title": "Step 18",
-        "text": "step18.md"
-      },
-      {
-        "title": "Step 19",
-        "text": "step19.md"
-      },
-      {
-        "title": "Step 20",
-        "text": "step20.md"
       }
     ],
     "intro": {
