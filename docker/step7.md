@@ -1,3 +1,3 @@
 ## A new shipping ecosystem
 
-![shipeco](images/shipping-indsutry-results.png)
+![shipeco](./images/shipping-indsutry-results.png)

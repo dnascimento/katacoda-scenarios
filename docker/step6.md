@@ -1,3 +1,3 @@
 ## Intermodal shipping containers
 
-![shipping](images/shipping-industry-solution.png)
+![shipping](./images/shipping-industry-solution.png)
