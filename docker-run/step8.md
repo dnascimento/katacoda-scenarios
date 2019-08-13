@@ -1,40 +1,133 @@
-## Building a custom Web server image
+## `Dockerfile`
 
-# Write a Dockerfile
+* A `Dockerfile` is a build recipe for a Docker image.
 
-Up until this point we've created a web server container and run some commands in an interactive shell inside it. What happens if we need to replicate or regenerate the container? Do we need to manually run all those commands again?
+* It contains a series of instructions telling Docker how an image is constructed.
 
-One of the main principles of Docker is that containers must be ephemeral, which means that the regeneration cost must be minimal. Having to run a bunch of commands each time we create a container goes against this.
+* The `docker build` command builds an image from a `Dockerfile`.
 
-The answer is writing a *Dockerfile*. This file is basically a recipe, a set of instructions that will be run in order to create a custom Docker image.
+## Writing our first `Dockerfile`
 
-The following set of instructions represent a *Dockerfile* to encapsulate the actions of the previous step.
+Our Dockerfile must be in a **new, empty directory**.
 
+1. Create a directory to hold our `Dockerfile`.
+
+```bash
+$ mkdir myimage
 ```
-FROM nginx
-RUN apt-get update && apt-get install -y wget
-WORKDIR /usr/share/nginx/html/
-RUN wget -O image.png http://lorempixel.com/300/200/animals/
+
+2. Create a `Dockerfile` inside this directory.
+
+```bash
+$ cd myimage
+$ vim Dockerfile
 ```
 
-> For convenience the *Dockerfile* may be downloaded from a public URL:
+Of course, you can use any other editor of your choice.
 
-`curl -O https://raw.githubusercontent.com/agmangas/katacoda-scenarios/master/intro-containers-lab-01/Dockerfile`{{execute}}
+---
 
-# Build an image
+## Type this into our Dockerfile...
 
-Let's build a custom image named *custom-nginx* using the `docker build` command:
+```dockerfile
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install figlet
+```
 
-`docker build -t nginx-custom .`{{execute}}
+* `FROM` indicates the base image for our build.
 
-> Note that this command must be run in the same level as the *Dockerfile* file.
+* Each `RUN` line will be executed by Docker during the build.
 
-We may verify that the recently created image is in our system by using `docker images`{{execute}} to list all the images.
+* Our `RUN` commands **must be non-interactive.**
+  <br/>(No input can be provided to Docker during the build.)
 
-Now we can create as many containers as we like from our custom image:
+* In many cases, we will add the `-y` flag to `apt-get`.
 
-`docker run -d -p 9292:80 --name another_server nginx-custom`{{execute}}
+---
 
-Check that our new server is working by accessing the URL:
+## Build it!
 
-`http://<hostname>:9292/image.png`
+Save our file, then execute:
+
+```bash
+$ docker build -t figlet .
+```
+
+* `-t` indicates the tag to apply to the image.
+
+* `.` indicates the location of the *build context*.
+
+We will talk more about the build context later.
+
+To keep things simple for now: this is the directory where our Dockerfile is located.
+
+---
+
+## What happens when we build the image?
+
+The output of `docker build` looks like this:
+
+.small[
+```bash
+docker build -t figlet .
+Sending build context to Docker daemon  2.048kB
+Step 1/3 : FROM ubuntu
+ ---> f975c5035748
+Step 2/3 : RUN apt-get update
+ ---> Running in e01b294dbffd
+(...output of the RUN command...)
+Removing intermediate container e01b294dbffd
+ ---> eb8d9b561b37
+Step 3/3 : RUN apt-get install figlet
+ ---> Running in c29230d70f9b
+(...output of the RUN command...)
+Removing intermediate container c29230d70f9b
+ ---> 0dfd7a253f21
+Successfully built 0dfd7a253f21
+Successfully tagged figlet:latest
+```
+]
+
+* The output of the `RUN` commands has been omitted.
+* Let's explain what this output means.
+
+---
+
+## Sending the build context to Docker
+
+```bash
+Sending build context to Docker daemon 2.048 kB
+```
+
+* The build context is the `.` directory given to `docker build`.
+
+* It is sent (as an archive) by the Docker client to the Docker daemon.
+
+* This allows to use a remote machine to build using local files.
+
+* Be careful (or patient) if that directory is big and your link is slow.
+
+* You can speed up the process with a [`.dockerignore`](https://docs.docker.com/engine/reference/builder/#dockerignore-file) file
+
+  * It tells docker to ignore specific files in the directory
+
+  * Only ignore files that you won't need in the build context!
+---
+
+## Running the image
+
+The resulting image is not different from the one produced manually.
+
+```bash
+$ docker run -ti figlet
+root@91f3c974c9a1:/# figlet hello
+ _          _ _
+| |__   ___| | | ___
+| '_ \ / _ \ | |/ _ \
+| | | |  __/ | | (_) |
+|_| |_|\___|_|_|\___/
+```
+
+
+Yay! .emoji[🎉]
