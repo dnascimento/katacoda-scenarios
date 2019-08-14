@@ -7,6 +7,6 @@
 @TODO: services
 
 ### Outside cluster
-@TODO: ingress
+[Expose Service in Public Clusters](https://github.source.internal.cba/pages/ApplicationInfrastructure/aws.appinfra.user.docs/4_kubernetes/loadbalancer-servicediscovery.html)
 
 
