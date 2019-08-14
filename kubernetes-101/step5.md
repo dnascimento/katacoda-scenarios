@@ -46,7 +46,7 @@ kubectl get pods
 
 *In fact, I'm pretty sure it showed up earlier, when we did:*
 
-`kubectl describe node node1`{{execute}}
+`kubectl describe node node01`{{execute}}
 
 ---
 

@@ -49,5 +49,5 @@ kubectl get nodes -o json |
 
 `kubectl describe`{{execute}} will retrieve some extra information about the resource
 
-`kubectl describe node node1`{{execute}}
+`kubectl describe node node01`{{execute}}
 
