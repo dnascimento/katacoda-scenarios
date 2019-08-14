@@ -37,13 +37,13 @@ spec:
 ```{{copy}}
 
 This is deployed to the cluster with the command
-`kubectl apply -f deployment.yaml`
+`kubectl apply -f deployment.yaml`{{execute}}
 
 As it's a Deployment object, a list of all the deployed objects can be obtained via
-`kubectl get deployment`
+`kubectl get deployment`{{execute}}
 
 Details of individual deployments can be outputted with
-`kubectl describe deployment webapp1`
+`kubectl describe deployment webapp1`{{execute}}
 
 
 ## What are these different things?
@@ -73,21 +73,23 @@ Details of individual deployments can be outputted with
 
 - `kubectl apply` created a *deployment*, `deployment.apps/webapp1`
 
-`kubectl get deployments`
+`kubectl get deployments`{{execute}}
 
 ```
 NAME                       DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 deployment.apps/webapp1   1         1         1            1           10m
 ```
 
-`kubectl get replicaset`
+`kubectl get replicaset`{{execute}}
+
 That deployment created a *replica set*, `replicaset.apps/webapp1-xxxxxxxxxx`
 ```
 NAME                                  DESIRED   CURRENT   READY     AGE
 replicaset.apps/webapp1-7c8bbcd9bc   1         1         1         10m
 ```
 
-`kubectl get pods`
+`kubectl get pods`{{execute}}
+
 That replica set created a *pod*, `pod/webapp1-xxxxxxxxxx-yyyyy`
 
 ```
