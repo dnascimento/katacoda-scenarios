@@ -2,7 +2,7 @@
 ## Kubernetes architecture
 
 - Ha ha ha ha
-- OK, I was trying to scare you, it's much simpler than that ❤️
+- OK, I was trying to scare you, it's much simpler than that
 - The previous schema is a Kubernetes cluster with storage backed by multi-path iSCSI
 
 ![that one is more like the real thing](./images/k8s-arch2.png)
