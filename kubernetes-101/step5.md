@@ -36,9 +36,9 @@ kubectl get pods
 
 - Namespaces allow us to segregate resources
 
-`kubectl get namespaces`{{execute}}
-`kubectl get namespace`{{execute}}
-`kubectl get ns`{{execute}}
+- `kubectl get namespaces`{{execute}}
+- `kubectl get namespace`{{execute}}
+- `kubectl get ns`{{execute}}
 
 --
 
@@ -99,7 +99,7 @@ kubectl get pods
 
 - We can also look at a different namespace (other than `default`)
 
-- List only the pods in the `kube-system` namespace:
--
-`kubectl get pods --namespace=kube-system`{{execute}}
-`kubectl get pods -n kube-system`{{execute}}
+ List only the pods in the `kube-system` namespace:
+
+- `kubectl get pods --namespace=kube-system`{{execute}}
+- `kubectl get pods -n kube-system`{{execute}}
