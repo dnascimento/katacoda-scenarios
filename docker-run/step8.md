@@ -12,16 +12,13 @@ Our Dockerfile must be in a **new, empty directory**.
 
 1. Create a directory to hold our `Dockerfile`.
 
-```bash
-$ mkdir myimage
-```
+`mkdir myimage`{{execute}}
 
-2. Create a `Dockerfile` inside this directory.
 
-```bash
-$ cd myimage
-$ vim Dockerfile
-```
+1. Create a `Dockerfile` inside this directory.
+
+`cd myimage`{{execute}}
+`vim Dockerfile`{{execute}}
 
 Of course, you can use any other editor of your choice.
 
@@ -33,7 +30,7 @@ Of course, you can use any other editor of your choice.
 FROM ubuntu
 RUN apt-get update
 RUN apt-get install figlet
-```
+```{{copy}}
 
 * `FROM` indicates the base image for our build.
 
@@ -50,9 +47,7 @@ RUN apt-get install figlet
 
 Save our file, then execute:
 
-```bash
-$ docker build -t figlet .
-```
+`docker build -t figlet .`{{execute}}
 
 * `-t` indicates the tag to apply to the image.
 
@@ -68,7 +63,6 @@ To keep things simple for now: this is the directory where our Dockerfile is loc
 
 The output of `docker build` looks like this:
 
-.small[
 ```bash
 docker build -t figlet .
 Sending build context to Docker daemon  2.048kB
@@ -87,7 +81,7 @@ Removing intermediate container c29230d70f9b
 Successfully built 0dfd7a253f21
 Successfully tagged figlet:latest
 ```
-]
+
 
 * The output of the `RUN` commands has been omitted.
 * Let's explain what this output means.
@@ -118,6 +112,8 @@ Sending build context to Docker daemon 2.048 kB
 ## Running the image
 
 The resulting image is not different from the one produced manually.
+
+`docker run -ti figlet`{{execute}}
 
 ```bash
 $ docker run -ti figlet

@@ -29,6 +29,8 @@
 
 What if we start a new container, and try to run `figlet` again?
 
+`docker run -it ubuntu`{{execute}}
+
 ```bash
 $ docker run -it ubuntu
 root@b13c164401fb:/# figlet

@@ -2,6 +2,8 @@
 
 The docker run command can be used to create a runtime instance of an image (i.e. container).
 
+`docker run --help`{{execute}}
+
 ```
 $ docker run --help
 
@@ -18,6 +20,8 @@ Let's run the hello-world image with the default command and no options:
 
 To list the containers that currently exist in our host we use docker ps.
 
+`docker ps --help`{{execute}}
+
 ```
 $ docker ps --help
 
@@ -29,6 +33,8 @@ List containers
 ## Remove containers
 
 How can we remove the hello-world container that is currently stopped? By using docker rm.
+
+`docker rm --help`{{execute}}
 
 ```
 $ docker rm --help
