@@ -1,4 +1,4 @@
 
 ## Kubernetes architecture
 
-![haha only kidding](./images/k8s-arch1.png)
+![haha only kidding](/katacoda-scenarios/kubernetes-101/images/k8s-arch1.png)
