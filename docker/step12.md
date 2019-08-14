@@ -1,120 +1,34 @@
-## Elevator pitch
+## Devs vs Ops, before Docker
 
-### (for your fellow devs and ops)
+* Drop a tarball (or a commit hash) with instructions.
 
-## Escape dependency hell
+* Dev environment very different from production.
 
-1. Write installation instructions into an `INSTALL.txt` file
+* Ops don't always have a dev environment themselves ...
 
-2. Using this file, write an `install.sh` script that works *for you*
+* ... and when they do, it can differ from the devs'.
 
-3. Turn this file into a `Dockerfile`, test it on your machine
+* Ops have to sort out differences and make it work ...
 
-4. If the Dockerfile builds on your machine, it will build *anywhere*
+* ... or bounce it back to devs.
 
-5. Rejoice as you escape dependency hell and "works on my machine"
-
-Never again "worked in dev - ops problem now!"
-
-## On-board developers and contributors rapidly
-
-1. Write Dockerfiles for your application components
-
-2. Use pre-made images from the Docker Hub (mysql, redis...)
-
-3. Describe your stack with a Compose file
-
-4. On-board somebody with two commands:
-
-```bash
-git clone ...
-docker-compose up
-```
-
-With this, you can create development, integration, QA environments in minutes!
+* Shipping code causes frictions and delays.
 
 ---
 
-## Implement reliable CI easily
+## Devs vs Ops, after Docker
 
-1. Build test environment with a Dockerfile or Compose file
+* Drop a container image or a Compose file.
 
-2. For each test run, stage up a new container or stack
+* Ops can always run that container image.
 
-3. Each run is now in a clean environment
+* Ops can always run that Compose file.
 
-4. No pollution from previous tests
+* Ops still have to adapt to prod environment,
+  but at least they have a reference point.
 
-Way faster and cheaper than creating VMs each time!
+* Ops have tools allowing to use the same image
+  in dev and prod.
 
----
-
-## Use container images as build artefacts
-
-1. Build your app from Dockerfiles
-
-2. Store the resulting images in a registry
-
-3. Keep them forever (or as long as necessary)
-
-4. Test those images in QA, CI, integration...
-
-5. Run the same images in production
-
-6. Something goes wrong? Rollback to previous image
-
-7. Investigating old regression? Old image has your back!
-
-Images contain all the libraries, dependencies, etc. needed to run the app.
-
----
-
-## Formats and APIs, before Docker
-
-* No standardized exchange format.
-  <br/>(No, a rootfs tarball is *not* a format!)
-
-* Containers are hard to use for developers.
-  <br/>(Where's the equivalent of `docker run debian`?)
-
-* As a result, they are *hidden* from the end users.
-
-* No re-usable components, APIs, tools.
-  <br/>(At best: VM abstractions, e.g. libvirt.)
-
-Analogy:
-
-* Shipping containers are not just steel boxes.
-* They are steel boxes that are a standard size, with the same hooks and holes.
-
-## Formats and APIs, after Docker
-
-* Standardize the container format, because containers were not portable.
-
-* Make containers easy to use for developers.
-
-* Emphasis on re-usable components, APIs, ecosystem of standard tools.
-
-* Improvement over ad-hoc, in-house, specific tools.
-
----
-## Shipping, before Docker
-
-* Ship packages: deb, rpm, gem, jar, homebrew...
-
-* Dependency hell.
-
-* "Works on my machine."
-
-* Base deployment often done from scratch (debootstrap...) and unreliable.
-
----
-## Shipping, after Docker
-
-* Ship container images with all their dependencies.
-
-* Images are bigger, but they are broken down into layers.
-
-* Only ship layers that have changed.
-
-* Save disk, network, memory usage.
+* Devs can be empowered to make releases themselves
+  more easily.
