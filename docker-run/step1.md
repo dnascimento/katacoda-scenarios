@@ -1,6 +1,21 @@
+
 ## Running Docker on macOS and Windows
 
-When you execute `docker version` from the terminal:
+**IMPORTANT:**
+- Public containers must be prefixed with: **dockerhub.artifactory.ai.cba**
+- Private containers are stored in **docker.artifactory.ai.cba**
+
+### OSX
+- [Installer](https://download.docker.com/mac/stable/Docker.dmg)
+- [Info](https://docs.docker.com/v17.12/docker-for-mac/install/)
+
+### Windows
+- [Installer](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
+- [Info](https://docs.docker.com/v17.12/docker-for-windows/install/#download-docker-for-windows)
+
+## Testing
+
+When you execute `docker version`{{execute}} from the terminal:
 
 * the CLI connects to the Docker Engine over a standard socket,
 * the Docker Engine is, in fact, running in a VM,
