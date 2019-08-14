@@ -2,10 +2,10 @@
 
 - A *service* is a stable endpoint to connect to "something"
 
-```
-kubectl get services
-kubectl get svc
-```
+
+- `kubectl get services`{{execute}}
+- `kubectl get svc`{{execute}}
+
 
 There is already at least one service on our cluster: the Kubernetes API itself.
 
@@ -36,18 +36,17 @@ kubectl get pods
 
 - Namespaces allow us to segregate resources
 
-```bash
-  kubectl get namespaces
-  kubectl get namespace
-  kubectl get ns
-  ```
+`kubectl get namespaces`{{execute}}
+`kubectl get namespace`{{execute}}
+`kubectl get ns`{{execute}}
+
 --
 
 *You know what ... This `kube-system` thing looks suspicious.*
 
 *In fact, I'm pretty sure it showed up earlier, when we did:*
 
-`kubectl describe node node1`
+`kubectl describe node node1`{{execute}}
 
 ---
 
@@ -58,9 +57,7 @@ kubectl get pods
 
 - List the pods in all namespaces:
 
-```bash
-kubectl get pods --all-namespaces
-```
+`kubectl get pods --all-namespaces`{{execute}}
 
 *Here are our system pods!*
 
@@ -103,7 +100,6 @@ kubectl get pods --all-namespaces
 - We can also look at a different namespace (other than `default`)
 
 - List only the pods in the `kube-system` namespace:
-```bash
-kubectl get pods --namespace=kube-system
-kubectl get pods -n kube-system
-```
+-
+`kubectl get pods --namespace=kube-system`{{execute}}
+`kubectl get pods -n kube-system`{{execute}}

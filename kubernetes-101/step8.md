@@ -103,7 +103,7 @@ Let's use the `kubectl logs` command
 
   (E.g. if we specify a deployment or replica set, it will get the first pod in it)
 
-`kubectl logs deploy/webapp1`
+`kubectl logs deploy/webapp1`{{execute}}
 
 #### Streaming logs in real time.
 
@@ -113,7 +113,7 @@ Just like `docker logs`, `kubectl logs` supports convenient options:
 - `--tail` to indicate how many lines you want to see (from the end)
 - `--since` to get logs only after a given timestamp
 
-`kubectl logs deploy/webapp1 --tail 1 --follow`
+`kubectl logs deploy/webapp1 --tail 1 --follow`{{execute}}
 
 ---
 
@@ -123,9 +123,7 @@ Just like `docker logs`, `kubectl logs` supports convenient options:
 
 Scale our `webapp1` deployment:
 
-```bash
-kubectl scale deployment webapp1 --replicas 3
-```
+`kubectl scale deployment webapp1 --replicas 3`{{execute}}
 
 ## Resilience
 
@@ -133,8 +131,7 @@ kubectl scale deployment webapp1 --replicas 3
 - The *replica set* ensures that the right number of *pods* are running
 - What happens if pods disappear?
 
-```
-kubectl get pods
-kubectl delete pod webapp1
-kubectl get pods
-```
+- `kubectl get pods`{{execute}}
+- `kubectl delete pod webapp1`{{execute}}
+- `kubectl get pods`{{execute}}
+

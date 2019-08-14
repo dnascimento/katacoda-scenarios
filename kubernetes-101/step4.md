@@ -32,23 +32,22 @@
 
 - Let's look at our `Node` resources with `kubectl get`!
 
-```
-kubectl get nodes
-kubectl get nodes -o wide
-kubectl get nodes -o yaml
-kubectl get nodes -o json
-```
+
+- `kubectl get nodes`{{execute}}
+- `kubectl get nodes -o wide`{{execute}}
+- `kubectl get nodes -o yaml`{{execute}}
+- `kubectl get nodes -o json`{{execute}}
+
 (Ab)using `kubectl` and `jq`
 
 ```
 kubectl get nodes -o json |
             jq ".items[] | {name:.metadata.name} + .status.capacity"
-```
+```{{execute}}
 
 ## `kubectl describe`
 
-- `kubectl describe` will retrieve some extra information about the resource
+`kubectl describe`{{execute}} will retrieve some extra information about the resource
 
-```
-kubectl describe node node1
-```
+`kubectl describe node node1`{{execute}}
+
