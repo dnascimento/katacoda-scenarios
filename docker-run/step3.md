@@ -4,10 +4,7 @@ Let's run a more exciting container:
 
 (on your laptop: **docker.artifactory.ai.cba/library/ubuntu**)
 
-```bash
-$ docker run -it ubuntu
-root@04c0bb0a6c07:/#
-```
+`docker run -it ubuntu`{{execute}}
 
 * This is a brand new container.
 
@@ -23,6 +20,8 @@ root@04c0bb0a6c07:/#
 
 Try to run `figlet` in our container.
 
+`figlet`{{execute}}
+
 ```bash
 root@04c0bb0a6c07:/# figlet hello
 bash: figlet: command not found
@@ -36,15 +35,7 @@ Alright, we need to install it.
 
 We want `figlet`, so let's install it:
 
-```bash
-root@04c0bb0a6c07:/# apt-get update
-...
-Fetched 1514 kB in 14s (103 kB/s)
-Reading package lists... Done
-root@04c0bb0a6c07:/# apt-get install figlet
-Reading package lists... Done
-...
-```
+`apt-get update; apt-get install -y figlet`{{execute}}
 
 One minute later, `figlet` is installed!
 
@@ -53,6 +44,8 @@ One minute later, `figlet` is installed!
 ## Try to run our freshly installed program
 
 The `figlet` program takes a message as parameter.
+
+`figlet hello`{{execute}}
 
 ```bash
 root@04c0bb0a6c07:/# figlet hello

@@ -6,12 +6,9 @@
 
 In your Docker environment, just run the following command:
 
-```bash
-$ docker run busybox echo hello world
-hello world
-```
+`docker run busybox echo hello world`{{execute}}
 
-(If your Docker install is brand new, you will also see a few extra lines,
+(you will also see a few extra lines,
 corresponding to the download of the `busybox` image.)
 
 ## That was our first container!
