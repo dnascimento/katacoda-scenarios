@@ -35,4 +35,4 @@ Now we can create as many containers as we like from our custom image:
 
 Check that our new server is working by accessing the URL:
 
-`http://<hostname>:9292/image.png`
+`curl http://localhost:9292/image.png`{{execute}}

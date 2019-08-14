@@ -7,10 +7,3 @@
 ### What does that really mean?
 
 
-#### Install Kubernetes in your laptop
-
-[Kubernetes in Docker](https://github.ai.cba/appinfra/kindest.node)
-
-@TODO: merge PR and copy commands here
-```
-```

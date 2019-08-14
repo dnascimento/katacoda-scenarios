@@ -30,4 +30,5 @@ Let's get some new static content to host in our web server by running the follo
 
 We've downloaded a new image named image.png to our web server root directory. We can view that image by going to:
 
-`curl http://<hostname>:9191/hello.html`{{execute}}
+`exit`{{execute}}
+`curl http://localhost:9191/hello.html`{{execute}}

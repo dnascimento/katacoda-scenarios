@@ -8,7 +8,7 @@
   - pod (group of containers running together on a node)
   - service (stable network endpoint to connect to one or multiple containers)
 
-![Node, pod, container](images/k8s-arch3-thanks-weave.png)
+![Node, pod, container](./images/k8s-arch3-thanks-weave.png)
 
 # First contact with `kubectl`
 

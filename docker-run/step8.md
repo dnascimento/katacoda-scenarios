@@ -1,4 +1,4 @@
-## `Dockerfile`
+## Dockerfile
 
 * A `Dockerfile` is a build recipe for a Docker image.
 
@@ -18,7 +18,7 @@ Our Dockerfile must be in a **new, empty directory**.
 1. Create a `Dockerfile` inside this directory.
 
 `cd myimage`{{execute}}
-`vim Dockerfile`{{execute}}
+`touch Dockerfile`{{execute}}
 
 Of course, you can use any other editor of your choice.
 
@@ -114,6 +114,7 @@ Sending build context to Docker daemon 2.048 kB
 The resulting image is not different from the one produced manually.
 
 `docker run -ti figlet`{{execute}}
+`figlet hello`{{execute}}
 
 ```bash
 $ docker run -ti figlet
@@ -126,4 +127,4 @@ root@91f3c974c9a1:/# figlet hello
 ```
 
 
-Yay! .emoji[🎉]
+Yay! 🎉

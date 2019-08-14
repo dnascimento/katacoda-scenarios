@@ -56,4 +56,4 @@ root@04c0bb0a6c07:/# figlet hello
 |_| |_|\___|_|_|\___/
 ```
 
-Beautiful! .emoji[😍]
+Beautiful! 😍
