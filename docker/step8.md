@@ -1,4 +1,4 @@
 ## A shipping container system for applications
 
-![shipapp](./images/shipping-software-solution.png)
+![shipapp](/dfrnascimento/scenarios/docker/assets/shipping-software-solution.png)
 

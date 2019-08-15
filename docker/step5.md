@@ -1,3 +1,3 @@
 ## The parallel with the shipping industry
 
-![history](./images/shipping-industry-problem.png)
+![history](/dfrnascimento/scenarios/docker/assets/shipping-industry-problem.png)

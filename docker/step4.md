@@ -1,3 +1,3 @@
 ## The matrix from hell
 
-![matrix](./images/shipping-matrix-from-hell.png)
+![matrix](/dfrnascimento/scenarios/docker/assets/shipping-matrix-from-hell.png)

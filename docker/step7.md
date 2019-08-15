@@ -1,3 +1,3 @@
 ## A new shipping ecosystem
 
-![shipeco](./images/shipping-indsutry-results.png)
+![shipeco](/dfrnascimento/scenarios/docker/assets/shipping-indsutry-results.png)

@@ -1,3 +1,3 @@
 ## Eliminate the matrix from hell
 
-![elimatrix](./images/shipping-matrix-solved.png)
+![elimatrix](/dfrnascimento/scenarios/docker/assets/shipping-matrix-solved.png)

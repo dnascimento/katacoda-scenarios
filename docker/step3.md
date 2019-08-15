@@ -1,4 +1,4 @@
 ## The deployment problem
 
-![problem](./images/shipping-software-problem.png)
+![problem](/dfrnascimento/scenarios/docker/assets/shipping-software-problem.png)
 
