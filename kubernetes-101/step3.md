@@ -5,7 +5,7 @@
 - OK, I was trying to scare you, it's much simpler than that
 - The previous schema is a Kubernetes cluster with storage backed by multi-path iSCSI
 
-![that one is more like the real thing](./images/k8s-arch2.png)
+![that one is more like the real thing](/dfrnascimento/scenarios/kubernetes-101/assets/k8s-arch2.png)
 
 (Courtesy of [Imesh Gunaratne](https://medium.com/containermind/a-reference-architecture-for-deploying-wso2-middleware-on-kubernetes-d4dee7601e8e))
 
@@ -37,4 +37,4 @@
 
 - The control plane is also called the "master"
 
-![One of the best Kubernetes architecture diagrams available](./images/k8s-arch4-thanks-luxas.png)
+![One of the best Kubernetes architecture diagrams available](/dfrnascimento/scenarios/kubernetes-101/assets/k8s-arch4-thanks-luxas.png)
