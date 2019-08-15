@@ -1,6 +1,9 @@
 
 ## Kubernetes architecture
 
-hello jen-gineers
+hello nen-gineers
 
-![haha only kidding](/katacoda-scenarios/scenarios/kubernetes-101/images/k8s-arch1.png)
+![test 1](/katacoda-scenarios/scenarios/kubernetes-101/assets/k8s-arch1.png)
+
+
+![test 2](/katacoda-scenarios/kubernetes-101/assets/k8s-arch1.png)
