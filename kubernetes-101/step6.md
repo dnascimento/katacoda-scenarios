@@ -1,4 +1,4 @@
-# Declarative vs imperative (aka Kubernetes vs Ansible)
+# Declarative vs imperative
 
 - Our container orchestrator puts a very strong emphasis on being *declarative*
 
